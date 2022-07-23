@@ -18,9 +18,14 @@ public class FirstTest {
     }
 
     @Test
-    public void userCanLoginByUsername() {
+    public void firstTest() {
         $(By.xpath("/html/body/ytd-app/div[1]/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input")).setValue("perros bailando").pressEnter();
-        $(By.id("text")).shouldBe(Condition.visible);
+        $(By.id("contents")).shouldBe(Condition.exist);
+    }
+    @Test
+    public void secondTest() {
+        $(By.xpath("/html/body/ytd-app/div[1]/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input")).setValue("perros bailando").pressEnter();
+        $(By.id("contents")).shouldBe(Condition.exist);
     }
 
     @After
